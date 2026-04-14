@@ -58,6 +58,91 @@ body {
   border-color: #666;
 }
 
+/* selected card highlight */
+.product-card.selected {
+  border: 2px solid #000;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+/* hover effect */
+.product-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+/* description hidden by default */
+.product-description {
+  display: none;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* when expanded */
+.product-description.open {
+  display: block;
+}
+
+/* button style */
+.toggle-desc-btn {
+  margin-top: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.toggle-desc-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.product-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.product-description.open {
+  max-height: 200px;
+}
+
+/* selected items list */
+.selected-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.routine-output {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.routine-output strong {
+  display: block;
+  margin-top: 10px;
+}
+
 /* chat section */
 .chatbox {
   margin: 40px 0;
@@ -252,4 +337,75 @@ body {
 
 .generate-btn i {
   margin-right: 8px;
+}
+
+.chat-message {
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.chat-message.user {
+  justify-content: flex-end;
+}
+
+.chat-message.assistant {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.chat-message.user .message-bubble {
+  background: #000;
+  color: #fff;
+}
+
+.chat-message.assistant .message-bubble {
+  background: #eee;
+}
+
+.clear-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.clear-btn:hover {
+  background: #000;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.routine-output h3 {
+  margin: 10px 0 6px; /* tighter spacing */
+  font-size: 16px;
+}
+
+.routine-output ol {
+  margin: 0 0 10px 18px;
+  padding: 0;
+}
+
+.routine-output li {
+  margin-bottom: 6px;
+}
+
+.routine-output br {
+  display: none; /* 🔥 removes extra spacing from <br> */
 }
